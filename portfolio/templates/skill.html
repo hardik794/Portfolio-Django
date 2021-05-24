@@ -1,0 +1,51 @@
+<div id="page-2" class="page three">
+    <div class="col-md-12 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Skills</h1>
+        <h2 class="mb-4">My Skills</h2>
+    </div>
+    <br>
+    <div class="row progress-circle mb-5 mt-5">
+
+        {% for skill in skills %}
+
+        {% if skill.id <= 4 %}
+        <div class="col-lg-3 mb-4">
+            <!-- Progress bar 1 -->
+            <div class="progress mx-auto" data-value='{{skill.Rank}}'>
+                <span class="progress-left">
+                    <span class="progress-bar border-primary"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar border-primary"></span>
+                </span>
+                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                    <div class="h2 font-weight-bold">{{skill.Rank}}<sup class="small">%</sup></div>
+                </div>
+            </div>
+            <h2 class="h5 font-weight-bold text-center mt-4">{{skill.SkillName}}</h2>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+    <div class="row">
+        {% for skill in skills %}
+
+        {% if skill.id >= 5 %}
+        <div class="col-md-6 animate-box">
+            <div class="progress-wrap ftco-animate">
+                <h3>{{skill.SkillName}}</h3>
+                <div class="progress">
+                    <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{skill.Rank}}" aria-valuemin="0"
+                        aria-valuemax="100" style="width:{{skill.Rank}}%">
+                        <span>{{skill.Rank}}%</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        {% endif %}
+
+        {% endfor %}
+
+    </div>
+</div>

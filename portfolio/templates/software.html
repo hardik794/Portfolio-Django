@@ -1,0 +1,17 @@
+<div id="page-5" class="page two">
+    <div class="col-md-12 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Softwares</h1>
+        <h2 class="mb-4">Softwares</h2>
+    </div>
+    <br>
+    {% for soft in softwares %}
+    <div class="resume-wrap d-flex ftco-animate">
+        <div class="icon d-flex align-items-center justify-content-center" style="background:none;">
+            <img src="{{soft.Softwareimage.url}}" height="30px" width="30px" />
+        </div>
+        <div class="text pl-3">
+            <h2 class="date" style="font-size: 25px;">{{soft.SoftwareName}}</h2>
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,98 @@
+{% for detail in details %}
+<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Contact</h1>
+                <h2 class="mb-4">Contact Me</h2>
+            </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box text-center p-5 shadow">
+                    <a href="{{detail.Github}}" target="_blank">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="fab fa-github" id="github" style="font-size: 50px;"></span>
+                        </div>
+                    </a>
+                    <h3>GitHub</h3>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box text-center p-5 shadow">
+                    <a href="{{detail.Linkdein}}" target="_blank">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="fab fa-linkedin-in" id="linkedin" style="font-size: 50px;"></span>
+                        </div>
+                    </a>
+                    <h3>Linkedin</h3>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box text-center p-5 shadow">
+                    <a href="{{detail.Youtube}}" target="_blank">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="fab fa-youtube" id="youtube" style="font-size: 50px;"></span>
+                        </div>
+                    </a>
+                    <h3>YouTube</h3>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                <div class="align-self-stretch box text-center p-5 shadow">
+                    <a href="mailto:{{detail.Email}}" target="_blank">
+                        <div class="icon d-flex align-items-center justify-content-center">
+                            <span class="fas fa-envelope" id="email" style="font-size: 50px;"></span>
+                        </div>
+                    </a>
+                    <h3 class="mb-4">Email</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row no-gutters block-9">
+            <div class="col-md-12 order-md-last d-flex">
+                <form id="my-form" action="https://formspree.io/f/xoqydawk" method="POST" class="bg-light p-4 p-md-5 contact-form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Name" name="Name" id="name"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" name="Email" id="mail"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Subject" name="Subject"
+                            id="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea cols="30" rows="7" class="form-control" placeholder="Message" name="Message"
+                            id="message" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Send Message" class="btn btn-submit btn-primary py-3 px-5">
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section style="background-color: primary;">
+    <div class="container mt-3">
+        <footer>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p style="color: black;">
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | <span
+                            style="color:#0000FF;">{{detail.Name}}</span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</section>
+{% endfor %}
+

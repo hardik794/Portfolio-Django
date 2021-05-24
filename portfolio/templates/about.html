@@ -1,0 +1,42 @@
+{% for detail in details %}
+<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+    <div class="container">
+        <div class="row d-flex no-gutters">
+            <div class="col-md-6 col-lg-6 d-flex">
+                <div class="img-about img d-flex align-items-stretch">
+                    <div class="overlay"></div>
+                    <div class="img d-flex align-self-stretch align-items-center"
+                        style="background-image:url({{detail.Myimage.url}});">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 pl-md-5 py-5">
+                <div class="row justify-content-start pb-3">
+                    <div class="col-md-12 heading-section ftco-animate">
+                        <h1 class="big">About</h1>
+                        <h2 class="mb-4">About Me</h2>
+                        <ul class="about-info mt-4 px-md-0 px-2">
+                            <li class="d-flex"><span>Name:</span> <span>{{detail.Name}}</span></li>
+                            <li class="d-flex"><span>Date of birth:</span> <span>{{detail.BirthDate}}</span></li>
+                            <li class="d-flex"><span>Email:</span> <span>{{detail.Email}}</span></li>
+                            <li class="d-flex"><span>Phone: </span> <span>+91-{{detail.Phone}}</span></li>
+                            <li class="d-flex"><span>City: </span> <span>{{detail.City}} , {{detail.State}} ,
+                                    {{detail.Country}}</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <span id="resume-section"></span>
+                <div class="counter-wrap ftco-animate d-flex mt-md-3">
+                    <div class="text">
+                        {% for myresume in resume %}
+                        <p><a href="{{myresume.MyResume.url}}" class="btn btn-primary py-3 px-3">Download
+                                Resume</a></p>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endfor %}

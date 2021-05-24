@@ -1,0 +1,25 @@
+<div id="page-3" class="page two">
+    <div class="col-md-12 heading-section text-center ftco-animate">
+        <h1 class="big big-2">Experiences</h1>
+        <h2 class="mb-4">My Experiences</h2>
+    </div>
+    <br>
+    {% for exp in experiences %}
+
+    <div class="resume-wrap d-flex ftco-animate mt-5">
+        <div class="icon d-flex align-items-center justify-content-center">
+            <span class="fas fa-university"></span>
+        </div>
+        <div class="text pl-3">
+            <h1>{{exp.Type}}</h1>
+            <span class="date">{{exp.joinDate}}{% if exp.EndDate %} -{{exp.EndDate}} {% else %} <span
+                    style="color: green; margin-left: 5px;">Working....</span> {% endif %}</span>
+            <h2>{{exp.Organization}}</h2>
+            <span class="position">{{exp.Title}}</span>
+            <p>{{exp.Description}}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>

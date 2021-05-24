@@ -1,0 +1,27 @@
+<div id="page-1" class="page one">
+    <div class="row justify-content-center pb-5">
+        <div class="col-md-10 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Education</h1>
+            <h2>Education</h2>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        {% for edu in education %}
+
+        <div class="col-md-6">
+            <div class="resume-wrap ftco-animate">
+                <div class="icon d-flex align-items-center justify-content-center">
+                    <span class="fas fa-graduation-cap"></span>
+                </div>
+                <span class="date">{{edu.Year}}</span>{% if edu.Status %} <span style="color: green; margin-left: 5px;">pursuing....</span> {% endif %}
+                <h2>{{edu.Title}}</h2>
+                <span class="position">{{edu.CenterName}}</span>
+                <h5 class="mt-4">{{edu.RankType}} : {{edu.Rank}}</h5>
+            </div>
+        </div>
+        
+        {% endfor %}
+
+    </div>
+</div>
