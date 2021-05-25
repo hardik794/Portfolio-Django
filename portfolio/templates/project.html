@@ -4,36 +4,26 @@
         <h2 class="mb-4">My Projects</h2>
     </div>
     <br>
-    <div class="row mt-5">
-    {% for prj in projects %}
 
-        <div class="col-md-4 d-flex ftco-animate">
-            <div class="services-1 shadow">
-                <span class="icon text-center">
-                    <i>{{forloop.counter}}</i>
-                </span>
-                <div class="desc">
-                    <h3 class="mb-5" align="center">{{prj.ProjectName}}</h3>
-                    <h6>Technology Used:</h6>
-                    <ul>
-                        <li>{{prj.Technology1}}</li>
-                        <li>{{prj.Technology2}}</li>
-                        <li>{{prj.Technology3}}</li>
-                    </ul>
-                </div>
-                <div>
-                    <a href="{{prj.ProjectLink}}" class="btn-card btn"
-                        target="_blank">Check it out</a>
-                </div>
-            </div>
+    {% for prj in projects %}
+    <div class="resume-wrap d-flex ftco-animate mt-5">
+        <div class="icon d-flex align-items-center justify-content-center">
+            <span class="flaticon-ideas"><i>{{forloop.counter}}</i></span>
         </div>
+        <div class="text pl-3">
+            <h2>{{prj.ProjectName}}</h2>
+            <span class="date">{{prj.Technology}}</span>
+            <p>{{prj.Discription}}</p>
+            <p><a href="{{prj.ProjectLink}}" class ="btn btn-primary" target="_blank">Check it Out</a></p>																
+        </div>
+    </div>
     {% endfor %}
 
-    </div>
-    <div>
-    {% for detail in details %}
-            <span class="date" style="margin-left: 50%; font-weight: 700; font-size: 17px;"><a href="{{detail.Github}}" target="_blank">Show more</a></span>
-            {% endfor %}
+    <div align="center">
+        {% for detail in details %}
+        <span class="date" style="font-weight: 700; font-size: 17px;"><a href="{{detail.Github}}" target="_blank">Show
+                more</a></span>
+        {% endfor %}
 
     </div>
 </div>

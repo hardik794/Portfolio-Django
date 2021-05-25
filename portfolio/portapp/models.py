@@ -44,14 +44,13 @@ class Experiences(models.Model):
     EndDate=models.DateField(blank=True)
     Organization = models.CharField(max_length=100)
     Title = models.CharField(max_length=100)
-    Description = models.CharField(max_length=500)
+    Description = models.TextField()
     
 class Projects(models.Model):
     id=models.AutoField(primary_key=True)
     ProjectName = models.CharField(max_length=100)
-    Technology1 = models.CharField(max_length=100)
-    Technology2 = models.CharField(max_length=100)
-    Technology3 = models.CharField(max_length=100)
+    Technology = models.CharField(max_length=200,default='null')
+    Discription = models.TextField(default='null')
     ProjectLink = models.URLField(max_length = 200)
 
 class Softwares(models.Model):

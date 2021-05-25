@@ -8,8 +8,7 @@
 
         {% for skill in skills %}
 
-        {% if skill.id <= 4 %}
-        <div class="col-lg-3 mb-4">
+        {% if skill.id <= 4 %} <div class="col-lg-3 mb-4">
             <!-- Progress bar 1 -->
             <div class="progress mx-auto" data-value='{{skill.Rank}}'>
                 <span class="progress-left">
@@ -23,29 +22,29 @@
                 </div>
             </div>
             <h2 class="h5 font-weight-bold text-center mt-4">{{skill.SkillName}}</h2>
-        </div>
-        {% endif %}
-        {% endfor %}
     </div>
-    <div class="row">
-        {% for skill in skills %}
+    {% endif %}
+    {% endfor %}
+</div>
+<div class="row">
+    {% for skill in skills %}
 
-        {% if skill.id >= 5 %}
-        <div class="col-md-6 animate-box">
-            <div class="progress-wrap ftco-animate">
-                <h3>{{skill.SkillName}}</h3>
-                <div class="progress">
-                    <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{skill.Rank}}" aria-valuemin="0"
-                        aria-valuemax="100" style="width:{{skill.Rank}}%">
-                        <span>{{skill.Rank}}%</span>
-                    </div>
+    {% if skill.id >= 5 %}
+    <div class="col-md-6 animate-box skill">
+        <div class="progress-wrap ftco-animate">
+            <h3>{{skill.SkillName}}</h3>
+            <div class="progress">
+                <div class="progress-bar color-1" role="progressbar" aria-valuenow="{{skill.Rank}}" aria-valuemin="0"
+                    aria-valuemax="100" style="width:{{skill.Rank}}%">
+                    <span>{{skill.Rank}}%</span>
                 </div>
             </div>
-            
         </div>
-        {% endif %}
-
-        {% endfor %}
 
     </div>
+    {% endif %}
+
+    {% endfor %}
+
+</div>
 </div>

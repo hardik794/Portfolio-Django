@@ -19,4 +19,30 @@
     <link rel="stylesheet" href="{% static 'css/aos.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css '%}">
     <link rel="stylesheet" href="{% static 'css/mystyle.css '%}">
+    <style>
+        .res{
+            margin-left: 15px;
+        }
+        @media only screen and (max-width: 913px) {
+            .about-info {
+                font-size: 13px;
+            }
+            .res{
+                font-size: 10px;
+            }
+        }
+        @media only screen and (max-width: 832px) {
+            .about-info {
+                font-size: 12px;
+            }
+        }
+        @media (min-width: 998px) {
+        .col-md-6 {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+    </style>
 </head>
