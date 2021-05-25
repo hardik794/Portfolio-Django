@@ -12,8 +12,8 @@
         </div>
         <div class="text pl-3">
             <h1>{{exp.Type}}</h1>
-            <span class="date">{{exp.joinDate}}{% if exp.EndDate %} -{{exp.EndDate}} {% else %} <span
-                    style="color: green; margin-left: 5px;">Working....</span> {% endif %}</span>
+            <span class="date">{{exp.joinDate}}{% if exp.Status %} <span
+                    style="color: green; margin-left: 5px;">to Working....</span> {% else %} - {{exp.EndDate}} {% endif %}</span>
             <h2>{{exp.Organization}}</h2>
             <span class="position">{{exp.Title}}</span>
             <p>{{exp.Description}}
