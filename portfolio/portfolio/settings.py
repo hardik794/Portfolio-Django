@@ -20,13 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-rz&^8(*8ibwds!j*_y(3qw_(6mooqge2ajjlr)#j4)kuq2o5=y'
+SECRET_KEY = os.environ['SECRET_KEY']
+# SECRET_KEY = ['django-insecure-rz&^8(*8ibwds!j*_y(3qw_(6mooqge2ajjlr)#j4)kuq2o5=y']
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','hardik-savaliya-portfolio.herokuapp.com']
-# ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['hardik-savaliya-portfolio.herokuapp.com','localhost']
 
 
 
@@ -84,7 +85,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -124,9 +124,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
+STATIC_ROOT = os.path.join(BASE_DIR, "live-static-files", "static-root")
+
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Media files (Images)
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

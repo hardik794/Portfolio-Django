@@ -13,14 +13,15 @@ class BasicDetails(models.Model):
     Github = models.URLField(max_length = 200)
     Linkdein = models.URLField(max_length = 200)
     Youtube = models.URLField(max_length = 200)
-    MyMainimage = models.ImageField(upload_to='pics')
-    Myimage = models.ImageField(upload_to='pics')
-    Backgroundimage = models.ImageField(upload_to='pics')
+    logo = models.URLField(max_length = 200,blank=True)
+    MyMainimage = models.URLField(max_length = 200)
+    Myimage = models.URLField(max_length = 200)
+    Backgroundimage = models.URLField(max_length = 200)
     Quote=models.CharField(max_length=100)
 
 class Resume(models.Model):
     id=models.AutoField(primary_key=True)
-    MyResume = models.FileField(upload_to ='uploads')
+    MyResume = models.URLField(max_length = 200)
     
 class Education(models.Model):
     id=models.AutoField(primary_key=True)
@@ -56,6 +57,6 @@ class Projects(models.Model):
 class Softwares(models.Model):
     id=models.AutoField(primary_key=True)
     SoftwareName = models.CharField(max_length=100)
-    Softwareimage = models.ImageField(upload_to='pics')
+    Softwareimage = models.URLField(max_length = 200)
 
 

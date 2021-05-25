@@ -4,9 +4,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hardik Savaliya</title>
-
-    <!-- <link rel="icon" href="images/title_logo.png"> -->
-
+    {% for detail in details %}
+    <link rel="icon" href="{{detail.logo}}">
+    {% endfor %}
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">

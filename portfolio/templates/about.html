@@ -6,7 +6,7 @@
                 <div class="img-about img d-flex align-items-stretch">
                     <div class="overlay"></div>
                     <div class="img d-flex align-self-stretch align-items-center"
-                        style="background-image:url({{detail.Myimage.url}});">
+                        style="background-image:url({{detail.Myimage}});">
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                 <div class="counter-wrap ftco-animate d-flex mt-md-3">
                     <div class="text">
                         {% for myresume in resume %}
-                        <p><a href="{{myresume.MyResume.url}}" class="btn btn-primary py-3 px-3">Download
+                        <p><a href="{{myresume.MyResume}}" class="btn btn-primary py-3 px-3">Download
                                 Resume</a></p>
                         {% endfor %}
 
