@@ -1,2 +1,5 @@
 # Portfolio
-Technology:Python-Django
+**Stack used:**
+
+- Front-end : HTML, CSS
+- Back-end : python-Django
