@@ -779,7 +779,6 @@ transform: translate(-50%,-50%);
 	padding:0;
 }
 .port_bannerbg_wrapper {
-    background: url('http://kamleshyadav.com/html/portfolio/color_version/assets/images/banner_bg.png');
     background-size:cover;
     -webkit-animation: moveup 50s linear infinite;
     -moz-animation: moveup 50s linear infinite;
@@ -1719,36 +1718,6 @@ h3.education_place {
     padding-left: 0;
     padding-right: 15px;
 }
-/* .experience_section .col-md-12:nth-child(2) .ex_leftside {
-    background: #ffc454;
-}
-.experience_section .col-md-12:nth-child(3) .ex_leftside {
-    background: #ff754a;
-}
-.experience_section .col-md-12:nth-child(4) .ex_leftside {
-    background: #00c8da;
-}
-.experience_section .col-md-12:nth-child(5) .ex_leftside {
-    background: #ffc454;
-}
-.experience_section .col-md-12:nth-child(6) .ex_leftside {
-    background: #ff517e;
-}
-.experience_section .col-md-12:nth-child(2) .ex_leftside:after {
-    border-left-color:#ffc454;
-}
-.experience_section .col-md-12:nth-child(3) .ex_leftside:after {
-	border-right-color: #ff754a;
-}
-.experience_section .col-md-12:nth-child(4) .ex_leftside:after {
-    border-right-color:#00c8da;
-}
-.experience_section .col-md-12:nth-child(5) .ex_leftside:after {
-    border-left-color:#ffc454;
-}
-.experience_section .col-md-12:nth-child(6) .ex_leftside:after {
-    border-left-color:#ff517e;
-} */
 
 /*================== 08 End Experience section css ==================  */
 #section {
@@ -2302,14 +2271,6 @@ p.banner_pera {
     right: auto;
     top: auto;
 }
-.experience_section .col-md-12:nth-child(2) .ex_leftside:after {
-    border-left-color: transparent;
-    border-top-color: #ffc454;
-}
-.experience_section .col-md-12:nth-child(5) .ex_leftside:after {
-    border-left-color: transparent;
-    border-top-color: #ffc454;
-}
 .ex_rightsidebox .ex_leftside:after {
     left: 21px;
     top: -21px;
@@ -2319,25 +2280,6 @@ p.banner_pera {
     border-right: 11px solid transparent;
     border-top: 11px solid transparent;
     border-bottom: 11px solid #f6483a;
-}
-.experience_section .col-md-12:nth-child(3) .ex_leftside:after {
-    border-right-color: transparent;
-    border-bottom-color: #ff754a;
-}
-.experience_section .col-md-12:nth-child(3) .ex_leftside {
-    float: right;
-    margin-top: 15px;
-    margin-bottom: 0px;
-}
-.experience_section .col-md-12:nth-child(4) .ex_leftside:after {
-    border-right-color: transparent;
-    border-bottom-color: #00c8da;
-}
-.experience_section .col-md-12:nth-child(4) .ex_leftside {
-    background: #00c8da;
-    margin-top: 15px;
-    margin-bottom: 0;
-	float: right;
 }
 .port_project_gallery .grid-item {
     width: 100%;

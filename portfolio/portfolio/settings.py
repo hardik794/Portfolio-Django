@@ -21,14 +21,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 
-# SECRET_KEY = os.environ['SECRET_KEY']
-SECRET_KEY = ['django-insecure-rz&^8(*8ibwds!j*_y(3qw_(6mooqge2ajjlr)#j4)kuq2o5=y']
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 # DEBUG = False
 
-# ALLOWED_HOSTS = ['hardik-savaliya-portfolio.herokuapp.com','localhost']
 ALLOWED_HOSTS = []
 
 
@@ -143,12 +141,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-AWS_ACCESS_KEY_ID = 'AKIARIUZDR4IMKJK5IOS'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'hardik-portfolio'
-# AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
-# AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
-# AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
 
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
