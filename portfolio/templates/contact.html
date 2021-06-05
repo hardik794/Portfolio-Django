@@ -1,89 +1,130 @@
-{% for detail in details %}
-<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+<div class="port_contact_wrapper prt_toppadder80 page_scroll" data-scroll="5" id="contact_sec">
     <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-7 heading-section text-center ftco-animate">
-                <h1 class="big big-2">Contact</h1>
-                <h2 class="mb-4">Contact Me</h2>
-            </div>
-        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="port_heading_wrapper text-center prt_bottompadder40">
+                    <div class="port_sub_heading_wrapper">
+                        <h1 class="big big2">Contact</h1>
 
-        <div class="row d-flex contact-info mb-5">
-            <div class="col-mmd-6 col-lg-3 d-flex ftco-animate">
-                <div class="align-self-stretch box text-center">
-                    <a href="{{detail.Github}}" target="_blank">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="fab fa-github" id="github" style="font-size: 50px;"></span>
-                        </div>
-                    </a>
-                    <h3>GitHub</h3>
+                        <h2 class="port_sub_heading">Get In Touch</h2>
+                    </div>
                 </div>
-            </div>
-            <div class="col-mmd-6 col-lg-3 d-flex ftco-animate">
-                <div class="align-self-stretch box text-center">
-                    <a href="{{detail.Linkdein}}" target="_blank">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="fab fa-linkedin-in" id="linkedin" style="font-size: 50px;"></span>
-                        </div>
-                    </a>
-                    <h3>Linkedin</h3>
-                </div>
-            </div>
-            <div class="col-mmd-6 col-lg-3 d-flex ftco-animate">
-                <div class="align-self-stretch box text-center">
-                    <a href="{{detail.Youtube}}" target="_blank">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="fab fa-youtube" id="youtube" style="font-size: 50px;"></span>
-                        </div>
-                    </a>
-                    <h3>YouTube</h3>
-                </div>
-            </div>
-            <div class="col-mmd-6 col-lg-3 d-flex ftco-animate">
-                <div class="align-self-stretch box text-center">
-                    <a href="mailto:{{detail.Email}}" target="_blank">
-                        <div class="icon d-flex align-items-center justify-content-center">
-                            <span class="fas fa-envelope" id="email" style="font-size: 50px;"></span>
-                        </div>
-                    </a>
-                    <h3 class="mb-4">Email</h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="row no-gutters block-9">
-            <div class="col-md-12 order-md-last d-flex">
-                <form id="my-form" action="https://formspree.io/f/xoqydawk" method="POST" class="bg-light p-4 p-md-5 contact-form">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Name" name="Name" id="name"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Email" name="Email" id="mail"
-                            required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject" name="Subject"
-                            id="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea cols="30" rows="7" class="form-control" placeholder="Message" name="Message"
-                            id="message" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Send Message" class="btn btn-submit btn-primary py-3 px-5">
-                    </div>
-                </form>
-
             </div>
         </div>
     </div>
-</section>
-<section style="background-color: primary;">
-    <div class="container mt-3">
-        <footer>
-            <div class="row">
-                <div class="col-md-12 text-center">
+    {% for detail in details %}
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+        <div class="container">
+            <div class="row d-flex contact-info mb-5">
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box text-center">
+                        <a href="{{detail.Github}}" target="_blank">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fab fa-github" id="github" style="font-size: 50px;"></span>
+                            </div>
+                        </a>
+                        <h5>GitHub</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box text-center">
+                        <a href="{{detail.Linkdein}}" target="_blank">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fab fa-linkedin-in" id="linkedin" style="font-size: 50px;"></span>
+                            </div>
+                        </a>
+                        <h5>Linkedin</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box text-center">
+                        <a href="{{detail.Youtube}}" target="_blank">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fab fa-youtube" id="youtube" style="font-size: 50px;"></span>
+                            </div>
+                        </a>
+                        <h5>YouTube</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+                    <div class="align-self-stretch box text-center">
+                        <a href="mailto:{{detail.Email}}" target="_blank">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fas fa-envelope" id="email" style="font-size: 50px;"></span>
+                            </div>
+                        </a>
+                        <h5 class="mb-4">Email</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+    <div class="port_contact_setions" id="scroll_contact">
+        <!-- start Contact section  -->
+        <div class="contact_section">
+            <div class="container">
+                <div class="port_contact_mainbox">
+                    <div class="row">
+                        <div class="col-md-12 text-center prt_bottompadder40 ">
+                            <div class="port_hadding_style_sec ">
+                                <h2 class="port_head_wrapper">My Contact</h2>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="port_contact_form">
+                                <form id="my-form" action="https://formspree.io/f/xoqydawk" method="POST">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <input type="text" name="Name" class="form-control require"
+                                                    id="name" placeholder="First name">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <input type="email" name="Email" class="form-control require"
+                                                    id="email" placeholder="Email Address" data-valid="email"
+                                                    data-error="Email should be valid.">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <input type="text" name="Subject" class="form-control require"
+                                                    id="subject" placeholder="Subject">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <textarea name="Message" class="form-control require" rows="3"
+                                                    id="comment" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="banner_btn">
+                                                <button type="submit" class="portfolio_btn btn_red submitForm">
+                                                    <span class="first_text">Submit</span>
+                                                    <span class="second_text">Send</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Contact section  -->
+
+    <div class="port_footer_setions prt_toppadder80">
+        <!-- start footer section  -->
+        {% for detail in details %}
+        <div class="footer_section">
+            <div class="copy_right_wrapper ">
+                <div class="col-12 text-center">
                     <p style="color: black;">
                         Copyright &copy;
                         <script>document.write(new Date().getFullYear());</script> All rights reserved | <span
@@ -91,8 +132,7 @@
                     </p>
                 </div>
             </div>
-        </footer>
-    </div>
-</section>
-{% endfor %}
-
+        </div>
+        {% endfor %}
+    </div><!-- End Footer section  -->
+</div><!-- End contact wrapper  -->

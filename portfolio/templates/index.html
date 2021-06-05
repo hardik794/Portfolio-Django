@@ -5,76 +5,51 @@
 
 {% include "head.html" %}
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-    <a id="buttonToTop" class="p-2"><i class="fas fa-chevron-up" style="font-size: 30px;"></i></a>
+<body>
     {% include "nav.html" %}
-    <section class="hero-wrap js-fullheight">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
-                <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
-                    <div class="text text-center">
-                        <span class="subheading">Hey! I am</span>
-                        {% for detail in details %}
-                        <h1>{{detail.Name}}</h1>
-                        {% endfor %}
-                        <h2>I'm a
-                            <span class="txt-rotate" data-period="2000"
-                                data-rotate='[ "Programmer.", "Developer.", "Data Science Ardent.", "Coder."]'></span>
-                        </h2>
+    {% include "banner.html" %}
+    <div class="port_togglebox">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="port_sec_warapper">
+        {% include "about.html" %}
+        {% include "education.html" %}
+        {% include "feature.html" %}
+        {% include "experience.html" %}
+        {% include "project.html" %}
+
+        <!-- start responsers section  -->
+        <section class="work-with-us">
+        {% for other in otherdetails %}
+        <style>
+            .work-with-us:before {
+                background: url('{{other.Tagpic.url}}');
+            }
+        </style>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
+                        <h6>{{other.Tagquote1}}</h6>
+                        <h2 data-text="{{other.Tagquote2}}">{{other.Tagquote3}}</h2>
                     </div>
+                    <!-- end col-12 -->
                 </div>
+                <!-- end row -->
             </div>
-        </div>
-        </div>
-        <div class="mouse">
-            <a href="#about-section" class="mouse-icon">
-                <div class="mouse-wheel"><span class="fas fa-arrow-down"></span></div>
-            </a>
-        </div>
-    </section>
-    {% include "about.html" %}
-    <section class="ftco-section ftco-no-pb goto-here">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2">
-                    <nav id="navi">
-                        <ul>
-                            <li><a href="#page-1">Education</a></li>
-                            <li><a href="#page-2">Skills</a></li>
-                            <li><a href="#page-3">Experiences</a></li>
-                            <li><a href="#page-4">Projects</a></li>
-                            <li><a href="#page-5">Softwares</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-md-10">
-
-                    {% include "education.html" %}
-                    {% include "skill.html" %}
-                    {% include "experience.html" %}
-                    {% include "project.html" %}
-                    <br><br>
-                    {% include "software.html" %}
-                </div>
-            </div>
-        </div>
-    </section>
-
-    {% for detail in details %}
-    <section class="ftco-section ftco-hireme img" style="background-image: url({{detail.Backgroundimage}})">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-7 ftco-animate text-center">
-                    <h2>"{{detail.Quote}}"</h2>
-                   
-                </div>
-            </div>
-        </div>
-    </section>
-    {% endfor %}
-    {% include "contact.html" %}
+            <!-- end container -->
+            {% endfor %}
+        </section>
+        <!-- End responsers section  -->
+        {% include "contact.html" %}
+    </div>
+<!-- go to top button -->
+<div class="bottom_top">
+    <i class="fa fa-arrow-up"></i>
+    <i class="fa fa-arrow-up"></i>
+</div>
+    
 
     {% include "script.html" %}
 

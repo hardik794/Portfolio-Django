@@ -1,20 +1,140 @@
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-    <div class="container">
-        <a class="navbar-brand" href="index.html"><span>H</span>ardik</a>
-        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
-            data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fas fa-bars"></span> Menu
-        </button>
-        <div class="collapse navbar-collapse" id="ftco-nav">
-            <ul class="navbar-nav nav ml-auto">
-                <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-                <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-                <li class="nav-item"><a href="#page-1" class="nav-link"><span>Education</span></a></li>
-                <li class="nav-item"><a href="#page-2" class="nav-link"><span>Skills</span></a></li>
-                <li class="nav-item"><a href="#page-3" class="nav-link"><span>Experiences</span></a></li>
-                <li class="nav-item"><a href="#page-4" class="nav-link"><span>Projects</span></a></li>
-                <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+{% load static %}
+
+<div class="port_sidebar_wrapper mport_sidebar_wrapper">
+    <div class="port_sidebar_profile">
+        <a href="javascript:;" class="port_sidebar_position active">
+            <div class="profile_circle ">
+            {% for detail in details %}
+                <img src="{{detail.Profilepic.url}}" alt="profile-image" class="img-fluid" /> 
+                {% endfor %}
+            </div>
+        </a>
+    </div>
+    <div class="port_sidebar_nav">
+        <div class="port_navigation index_navigation">
+            <ul class="nav_list">
+                <li data-number="0">
+                    <div class="tooltip_box">
+                        <a href="" class="siderbar_menuicon">
+                            <span class="first_micon">
+
+                                <i class="fal fa-address-card nav_about_svg"
+                                    style="font-size: 25px; color:#ff754a"></i>
+                            </span>
+                            <span class="second_micon">
+
+                                <i class="fal fa-address-card nav_about_svg"
+                                    style="font-size: 25px; color:#ff754a"></i>
+                            </span>
+                        </a>
+                        <span class="menu_tooltip">About</span>
+                    </div>
+                </li>
+                <li data-number="1">
+                    <div class="tooltip_box">
+                        <a href="" class="siderbar_menuicon">
+                            <span class="first_micon">
+                                <i class="fal fa-graduation-cap nav_about_svg"
+                                    style="font-size: 25px; color:#00c8da"></i>
+                            </span>
+                            <span class="second_micon">
+                                <i class="fal fa-graduation-cap nav_about_svg"
+                                    style="font-size: 25px; color:#00c8da"></i>
+
+                            </span>
+                        </a>
+                        <span class="menu_tooltip">Education</span>
+                    </div>
+                </li>
+                <li data-number="2">
+                    <div class="tooltip_box">
+                        <a href="" class="siderbar_menuicon">
+                            <span class="first_micon">
+                                <i class="fal fa-laptop-code nav_about_svg"
+                                    style="font-size: 25px; color:#ffc454"></i>
+                            </span>
+                            <span class="second_micon">
+                                <i class="fal fa-laptop-code nav_about_svg"
+                                    style="font-size: 25px; color:#ffc454"></i>
+                            </span>
+                        </a>
+                        <span class="menu_tooltip">Skills</span>
+                    </div>
+                </li>
+                <li data-number="3">
+                    <div class="tooltip_box">
+                        <a href="" class="siderbar_menuicon">
+                            <span class="first_micon">
+                                <i class="fal fa-briefcase nav_about_svg"
+                                    style="font-size: 25px; color:#00df13"></i>
+                            </span>
+                            <span class="second_micon">
+                                <i class="fal fa-briefcase nav_about_svg"
+                                    style="font-size: 25px; color:#00df13"></i>
+                            </span>
+                        </a>
+                        <span class="menu_tooltip">Experience</span>
+                    </div>
+                </li>
+                <li data-number="4">
+                    <div class="tooltip_box">
+                        <a href="" class="siderbar_menuicon">
+                            <span class="first_micon">
+                                <i class="fal fa-tasks nav_about_svg" style="font-size: 25px; color:#c954ff"></i>
+                            </span>
+                            <span class="second_micon">
+                                <i class="fal fa-tasks nav_about_svg" style="font-size: 25px; color:#c954ff"></i>
+                            </span>
+                        </a>
+                        <span class="menu_tooltip">Projects</span>
+                    </div>
+                </li>
+                <li data-number="5">
+                    <div class="tooltip_box">
+                        <a href="" class="siderbar_menuicon">
+                            <span class="first_micon">
+                                <i class="fal fa-phone-alt nav_about_svg"
+                                    style="font-size: 25px; color:#ff4a95"></i>
+                            </span>
+                            <span class="second_micon">
+                                <i class="fal fa-phone-alt nav_about_svg"
+                                    style="font-size: 25px; color:#ff4a95"></i>
+                            </span>
+                        </a>
+                        <span class="menu_tooltip">Contact</span>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
-</nav>
+    <div class="port_sidebar_social">
+        <div class="port__social_box">
+            <div class="port__followus">
+                <p>Follow me</p>
+            </div>
+            <ul class="social_list">
+                {% for detail in details %}
+                <li>
+                    <a href="{{detail.Github}}" class="siderbar_icon" target="_blank">
+                        <span class="first_icon"><i class="fab fa-github nav_git"></i></span>
+                        <span class="second_icon"><i class="fab fa-github nav_git"></i></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{detail.Linkdein}}" class="siderbar_icon" target="_blank">
+                        <span class="first_icon"><i class="fab fa-linkedin-in nav_in"></i></span>
+                        <span class="second_icon"><i class="fab fa-linkedin-in nav_in"></i></span>
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="javascript:;" class="siderbar_icon">
+                        <span class="first_icon"><i class="fab fa-instagram nav_insta"></i></span>
+                        <span class="second_icon"><i class="fab fa-instagram nav_insta"></i></span>
+                    </a>
+                </li> -->
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End side bar -->

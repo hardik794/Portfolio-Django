@@ -1,27 +1,158 @@
-<div id="page-1" class="page one">
-    <div class="row justify-content-center pb-5">
-        <div class="col-md-10 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Education</h1>
-            <h2>Education</h2>
-        </div>
-    </div>
-    <br>
-    <div class="row">
-        {% for edu in education %}
+<div class="port_education_setions prt_toppadder80 prt_bottompadder80 " data-scroll="1">
+    <!-- start Education section  -->
+    <div class="education_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="port_heading_wrapper text-center prt_bottompadder40">
+                        <div class="port_sub_heading_wrapper">
+                            <h1 class="big big2 text-center">Education</h1>
 
-        <div class="col-md-6">
-            <div class="resume-wrap ftco-animate">
-                <div class="icon d-flex align-items-center justify-content-center">
-                    <span class="fas fa-graduation-cap"></span>
+                            <h2 class="port_sub_heading">My Education</h2>
+                        </div>
+                    </div>
                 </div>
-                <span class="date">{{edu.Year}}</span>{% if edu.Status %} <span style="color: green; margin-left: 5px;">pursuing....</span> {% endif %}
-                <h2>{{edu.Title}}</h2>
-                <span class="position">{{edu.CenterName}}</span>
-                <h5 class="mt-4">{{edu.RankType}} : {{edu.Rank}}</h5>
+                <div class="col-md-12 mt-5">
+                    <div class="education_main_wrapper ">
+                    {% for edu in education reversed %}
+                        {% if forloop.counter|divisibleby:2 %}
+                         <!-- second box -->
+                        <div class="education_box education_secondbox secondbox">
+                            <div class="row">
+                                <style>
+                                    .education_box.secondbox:nth-child({{forloop.counter}}) h1 {
+                                        border-color: {{edu.Colour}};
+                                        color: {{edu.Colour}};
+                                    }
+
+                                    .education_box.secondbox:nth-child({{forloop.counter}}) .edu_mainyear h1:after {
+                                        border-right-color: {{edu.Colour}};
+                                    }
+
+                                    .education_box.secondbox:nth-child({{forloop.counter}}) .edu_mainyear h1:before {
+                                        border-color: {{edu.Colour}};
+                                    }
+
+                                    .education_box.secondbox:nth-child({{forloop.counter}}) .edu_mainyear:after {
+                                        background: {{edu.Colour}};
+                                    }
+
+                                    .education_box.secondbox:nth-child({{forloop.counter}}) .my-bg {
+                                        background: {{edu.Colour}};
+                                    }
+
+                                    @media (max-width: 767px) {
+                                        .education_box.secondbox:nth-child({{forloop.counter}}) .edu_mainyear h1:after {
+                                            border-right-color: transparent;
+                                            border-bottom-color: {{edu.Colour}};
+                                        }
+                                    }
+                                </style>
+                                <div class="col-lg-6 col-md-8 col-sm-12 col-12 align-self-center">
+                                    <div class="education_mright education_left ">
+                                        <div class="education_minfo education_rinfo ">
+                                            <div class="prt_rightside_title">
+                                                <div class="left_title_box">
+                                                    <div class="right_title my-bg">
+                                                        <h4>{{edu.Title}}</h4>
+                                                    </div>
+                                                    <div class="left_title">
+                                                        <h4>{{forloop.counter}}</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h3 class="education_place"><span data-hover="Diploma"
+                                                    class="data_hover">{{edu.CenterName}}</h3>
+                                                    <p>{{edu.Discription}}</p>
+                                            <p style="color:{{edu.Colour}}">{{edu.RankType}} : {{edu.Rank}}{% if edu.Status %} <span style="color: green; margin-left: 5px;">pursuing....</span> {% endif %}
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-4 col-sm-12 col-12 align-self-center">
+                                    <div class="education_mleft education_left ">
+                                        <div class="edu_mainyear edu_leftyear">
+                                            <h1>{{edu.Year}}</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- second box -->
+                        
+                        {% else %}
+                        <!-- first box -->
+
+                        <div class="education_box education_firsrtbox firstbox">
+                            <style>
+                                .education_box.firstbox:nth-child({{forloop.counter}}) h1 {
+                                    border-color: {{edu.Colour}};
+                                    color: {{edu.Colour}};
+                                }
+
+                                .education_box.firstbox:nth-child({{forloop.counter}}) .edu_mainyear h1:after {
+                                    border-left-color: {{edu.Colour}};
+                                }
+
+                                .education_box.firstbox:nth-child({{forloop.counter}}) .edu_mainyear h1:before {
+                                    border-color: {{edu.Colour}};
+                                }
+
+                                .education_box.firstbox:nth-child({{forloop.counter}}) .edu_mainyear:after {
+                                    background: {{edu.Colour}};
+                                }
+
+                                .education_box.firstbox:nth-child({{forloop.counter}}) .my-bg {
+                                    background: {{edu.Colour}};
+                                }
+
+                                @media (max-width: 767px) {
+                                    .education_box.firstbox:nth-child({{forloop.counter}}) .edu_mainyear h1:after {
+                                        border-left-color: transparent!important;
+                                        border-top-color: {{edu.Colour}};
+                                    }
+                                }
+                            </style>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-4 col-sm-12 col-12 align-self-center">
+                                    <div class="education_mleft education_left">
+                                        <div class="edu_mainyear edu_leftyear">
+                                            <h1>{{edu.Year}}</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-8 col-sm-12 col-12 align-self-center">
+                                    <div class="education_mright education_right ">
+                                        <div class="education_minfo education_rinfo ">
+                                            <div class="prt_rightside_title">
+                                                <div class="left_title_box">
+                                                    <div class="left_title">
+                                                        <h4>{{forloop.counter}}</h4>
+                                                    </div>
+                                                    <div class="right_title my-bg">
+                                                        <h4>{{edu.Title}}</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <h3 class="education_place"><span data-hover="Diploma"
+                                                    class="data_hover">{{edu.CenterName}}</h3>
+                                                    <p>{{edu.Discription}}</p>
+                                            <p style="color:{{edu.Colour}}">{{edu.RankType}} : {{edu.Rank}}{% if edu.Status %} <span style="color: green; margin-left: 5px;">pursuing....</span> {% endif %}
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- first box -->
+                       
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
-        
-        {% endfor %}
-
     </div>
-</div>
+</div> <!-- End Education section  -->

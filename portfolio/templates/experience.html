@@ -1,25 +1,115 @@
-<div id="page-3" class="page two">
-    <div class="col-md-12 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Experiences</h1>
-        <h2 class="mb-4">My Experiences</h2>
-    </div>
-    <br>
-    {% for exp in experiences %}
+<div class="port_experience_setions prt_toppadder80" data-scroll="3">
+    <!-- start Experience section  -->
+    <div class="experience_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="port_heading_wrapper text-center prt_bottompadder40">
 
-    <div class="resume-wrap d-flex ftco-animate mt-5">
-        <div class="icon d-flex align-items-center justify-content-center">
-            <span class="fas fa-briefcase"></span>
-        </div>
-        <div class="text pl-3">
-            <h1>{{exp.Type}}</h1>
-            <span class="date">{{exp.joinDate}}{% if exp.Status %} <span
-                    style="color: green; margin-left: 5px;">to Working....</span> {% else %} - {{exp.EndDate}} {% endif %}</span>
-            <h2>{{exp.Organization}}</h2>
-            <span class="position">{{exp.Title}}</span>
-            <p>{{exp.Description}}
-            </p>
+                        <div class="col-md-12 heading-section text-center ftco-animate">
+                            <h1 class="big big2">Experience</h1>
+                            <h2 class="port_sub_heading_sk">My Experience</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row exp">
+            {% for exp in experiences %}
+            {% if forloop.counter|divisibleby:2 %}
+            <div class="col-lg-6 col-md-12">
+                    <style>
+                        .experience_section .col-md-12:nth-child(2) .ex_leftside {
+                            background: {{exp.Colour}};
+                        }
+                        .experience_section .col-md-12:nth-child(2) .ex_leftside:after {
+                            border-right-color:{{exp.Colour}};
+                        }
+                        .experience_section .col-md-12:nth-child(2) .ex_col {
+                            color:{{exp.Colour}};
+                        }
+                        @media (max-width:575px) {
+                            .experience_section .col-md-12:nth-child(2) .ex_leftside:after {
+                                border-right-color: transparent;
+                                border-top-color: transparent;
+
+                                border-bottom-color: {{exp.Colour}};
+                            }
+                            .experience_section .col-md-12:nth-child(2) .ex_leftside {
+                                float: right;
+                                margin-top: 15px;
+                                margin-bottom: 0px;
+                            }
+                        }
+                    </style>
+                    <div class="exprince_box ex_rightsidebox">
+                        <div class="row">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-12 w-100">
+                                <div class="ex_rightside">
+                                    <h4>{{exp.Type}} <span data-hover="Developer"
+                                            class="data_hover ex_col" style="font-size:15px">| {{exp.Title}}</span></h4>
+                                    <span class="ex_col	">{{exp.Organization}}</span>
+                                    <p class="ex_details">{{exp.Description}}
+                                    
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-12 padding-0 w-100">
+                                <div class="ex_leftside">
+                                    <h1>{{exp.joinDate|date:"Y"}}</h1>
+                                    <h4>{{exp.joinDate|date:"M"}} to {% if exp.Status %}{% else %} {{exp.EndDate|date:"M"}} {% endif %} </h4>
+                                    <h1>{% if exp.Status %} <span
+                    style="color: green; margin-left: 5px;font-size:19px">Present....</span> {% else %} {{exp.EndDate|date:"Y"}} {% endif %}</span></h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                {% else %}
+                <div class="col-lg-6 col-md-12">
+                    <style>
+                        .experience_section .col-md-12:nth-child(1) .ex_leftside {
+                            background: {{exp.Colour}};
+                        }
+                        .experience_section .col-md-12:nth-child(1) .ex_leftside:after {
+                            border-left-color:{{exp.Colour}};
+                        }
+                        .experience_section .col-md-12:nth-child(1) .ex_col {
+                            color:{{exp.Colour}};
+                        }
+                        @media (max-width:575px) {
+                            .experience_section .col-md-12:nth-child(1) .ex_leftside:after {
+                                border-left-color: transparent;
+                                border-top-color: {{exp.Colour}};
+                            }
+                        }
+                    </style>
+                    <div class="exprince_box ex_leftsidebox">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-12 padding-0 w-100">
+                                <div class="ex_leftside">
+                                     <h1>{{exp.joinDate|date:"Y"}}</h1>
+                                    <h4>{{exp.joinDate|date:"M"}} to {% if exp.Status %}{% else %} {{exp.EndDate|date:"M"}} {% endif %} </h4>
+                                    <h1>{% if exp.Status %} <span
+                    style="color: green; margin-left: 5px;font-size:19px">Present....</span> {% else %} {{exp.EndDate|date:"Y"}} {% endif %}</span></h1>
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-12 w-100">
+                                <div class="ex_rightside">
+                                    <h4>{{exp.Type}} <span data-hover="Designer"
+                                            class="data_hover ex_col" style="font-size:15px">| {{exp.Title}}</span></h4>
+                                    <span class="ex_col">{{exp.Organization}}</span>
+                                    <p class="ex_details">{{exp.Description}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
         </div>
     </div>
-    {% endfor %}
-
-</div>
+</div><!-- End Experience section  -->

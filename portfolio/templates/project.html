@@ -1,29 +1,45 @@
-<div id="page-4" class="page four">
-    <div class="col-md-12 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Projects</h1>
-        <h2 class="mb-4">My Projects</h2>
-    </div>
-    <br>
+<div class="port_services_setions prt_toppadder80" data-scroll="4">
+    <!-- start services section  -->
+    <div class="services_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="port_heading_wrapper text-center prt_bottompadder40">
 
-    {% for prj in projects %}
-    <div class="resume-wrap d-flex ftco-animate mt-5">
-        <div class="icon d-flex align-items-center justify-content-center">
-            <span class="flaticon-ideas"><i>{{forloop.counter}}</i></span>
+                        <div class="col-md-12 heading-section text-center ftco-animate">
+                            <h1 class="big big2">Projects</h1>
+                            <h2 class="port_sub_heading_sk">My Projects</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row exp">
+                {% for prj in projects %}
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div class="port_services_box_wrapper">
+                        <div class="port_services_box">
+                            <h2 class="project_heading">{{prj.ProjectName}}</h2>
+                            <p class="project_pera" style="color: black;">{{prj.Technology}}</p>
+                            <hr>
+                            <p class="project_pera">{{prj.Discription}}</p>
+                            <div class="pr_btn">
+                                <a href="{{prj.ProjectLink}}" class="portfolio_pr_btn" target="_blank">
+                                    <span class="first_text">Check it Out</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div align="center">
+                {% for detail in details %}
+                <span class="date" style="font-weight: 700; font-size: 17px;"><a href="{{detail.Github}}" target="_blank">Show
+                        more</a></span>
+                {% endfor %}
+        
+            </div>
         </div>
-        <div class="text pl-3">
-            <h2>{{prj.ProjectName}}</h2>
-            <span class="date">{{prj.Technology}}</span>
-            <p>{{prj.Discription}}</p>
-            <p><a href="{{prj.ProjectLink}}" class ="btn btn-primary" target="_blank">Check it Out</a></p>																
-        </div>
     </div>
-    {% endfor %}
-
-    <div align="center">
-        {% for detail in details %}
-        <span class="date" style="font-weight: 700; font-size: 17px;"><a href="{{detail.Github}}" target="_blank">Show
-                more</a></span>
-        {% endfor %}
-
-    </div>
-</div>
+</div><!-- End Experience section  -->

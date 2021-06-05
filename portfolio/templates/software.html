@@ -1,17 +1,27 @@
-<div id="page-5" class="page two">
-    <div class="col-md-12 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Softwares</h1>
-        <h2 class="mb-4">Softwares</h2>
-    </div>
-    <br>
-    {% for soft in softwares %}
-    <div class="resume-wrap d-flex ftco-animate">
-        <div class="icon d-flex align-items-center justify-content-center" style="background:none;">
-            <img src="{{soft.Softwareimage}}" height="30px" width="30px" />
+{% for other in otherdetails %}
+<section class="clients" style="background: url('{{other.Featurepic.url}}');">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 wow fadeIn">
+                <h6>{{other.Softquote1}}</h6>
+                <h1 class="big">Softwares</h1>
+                <h2 class="port_sub_heading">Softwares</h2>
+                <h4>{{other.Softquote2}}</h4>
+
+                <!-- end custom-link -->
+            </div>
+            <!-- end col-4 -->
+            <div class="col-lg-9 wow fadeIn" data-wow-delay="0.10s">
+                <ul>
+                    {% for soft in softwares %}
+                    <li><img src="{{soft.Softwareimage.url}}" alt="Image"><small>{{soft.SoftwareName}}</small></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!-- end col-7 -->
         </div>
-        <div class="text pl-3">
-            <h2 class="date" style="font-size: 25px;">{{soft.SoftwareName}}</h2>
-        </div>
+        <!-- end row -->
     </div>
-    {% endfor %}
-</div>
+    <!-- end container -->
+</section>
+{% endfor %}

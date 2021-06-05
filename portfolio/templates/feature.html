@@ -1,0 +1,32 @@
+<section id="features" class="features" data-scroll="2">
+   <div class="container">
+    <ul class="nav nav-tabs row d-flex">
+        <li class="nav-item col-6" data-aos="zoom-in" style="padding-left:0px">
+            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">
+                <i class="ri-gps-line"></i>
+                <h4>My Skills</h4>
+            </a>
+        </li>
+        <li class="nav-item col-6" data-aos="zoom-in" data-aos-delay="100" style="padding-right:0px">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+                <i class="ri-body-scan-line"></i>
+                <h4>Softwares</h4>
+            </a>
+        </li>
+    </ul>
+    </div>
+    <div class="tab-content" data-aos="fade-up">
+        <div style="background-color: black; height:20px"></div>
+        <div class="tab-pane active show" id="tab-1">
+        {% include "skill.html" %}
+           
+        </div>
+        <div class="tab-pane" id="tab-2">
+            
+            {% include "software.html" %}
+
+        </div>
+        <div style="background-color: black; height:20px"></div>
+    </div>
+    <!-- </div> -->
+</section>

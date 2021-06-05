@@ -1,42 +1,75 @@
-{% for detail in details %}
-<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
-    <div class="container">
-        <div class="row d-flex no-gutters">
-            <div class="col-md-6 col-lg-6 d-flex">
-                <div class="img-about img d-flex align-items-stretch">
-                    <div class="overlay"></div>
-                    <div class="img d-flex align-self-stretch align-items-center"
-                        style="background-image:url({{detail.Myimage}});">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 pl-md-5 py-5">
-                <div class="row justify-content-start pb-3">
-                    <div class="col-md-12 heading-section ftco-animate">
-                        <h1 class="big">About</h1>
-                        <h2 class="mb-4">About Me</h2>
-                        <ul class="about-info mt-4 px-md-0 px-2">
-                            <li class="d-flex"><span>Name:</span> <span>{{detail.Name}}</span></li>
-                            <li class="d-flex"><span>Date of birth:</span> <span>{{detail.BirthDate}}</span></li>
-                            <li class="d-flex"><span>Email:</span> <span>{{detail.Email}}</span></li>
-                            <li class="d-flex"><span>Phone: </span> <span>+91-{{detail.Phone}}</span></li>
-                            <li class="d-flex"><span>City: </span> <span>{{detail.City}} , {{detail.State}} ,
-                                    {{detail.Country}}</span></li>
-                        </ul>
-                    </div>
-                </div>
-                <span id="resume-section"></span>
-                <div class="counter-wrap ftco-animate d-flex mt-md-3">
-                    <div class="text">
-                        {% for myresume in resume %}
-                        <p><a href="{{myresume.MyResume}}" class="btn btn-primary py-3 px-3 res" target="_blank">Download
-                                Resume</a></p>
-                        {% endfor %}
+<div class="port_about_setions prt_toppadder80 page_scroll" data-scroll="0" id="about_sec">
+    <!-- start about section  -->
+    {% for detail in details %}
+    <div class="selfintro_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-12 col-md-12">
+                    <div class="about_leftsection ">
+                        <div class="img_warapper">
+                            <img class="img-fluid" src="{{detail.Aboutpic.url}}" alt="About"
+                                title="more information click + icon">
+                            <div class="icon" title="more information click + icon">
+                                <div class="iconbox">
+                                    <i class="fa fa-plus icon_plus" aria-hidden="true"></i>
+                                    <i class="fa fa-minus icon_minus" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="left_deatils">
+                            <h2 class="about_tophead" style="color:white">{{detail.AboutPicTitle}}
+                            </h2>
+                            <p class="about_deatils">{{detail.AboutPicDesc}}</p>
+                            <div class="signature_box">
+                                <div class="name">
+                                    <h2>{{detail.Name}}</h2>
+                                    <p>{{detail.Proffesion1}}</p>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-12 col-md-12">
+                    <div class="right_section">
+                        <div class="port_heading_wrapper">
+                            <div class="port_sub_heading_wrapper">
+                                <h1 class="big big-ab">About</h1>
+                                <h2 class="port_sub_heading">About Me </h2>
+                            </div>
+                        </div>
+                        <div class="personal_details">
+                            <h2 class="about_tophead">{{detail.AboutTitle}}
+                            </h2>
+
+                            <h1 class="ps_name">{{detail.Name}}</h1>
+                            <p class="ps_designation">{{detail.Proffesion1}}</p>
+                            <ul class="info-list">
+                                <li><span class="title">Age</span><span class="value">{{age}}</span></li>
+
+                                <li><span class="title">Date Of Birth</span><span class="value">{{detail.BirthDate}}</span></li>
+                                <li><span class="title">E-mail</span><span class="value"><a
+                                            href="mailto:email@example.com">{{detail.Email}}</a></span></li>
+                                <li><span class="title">Phone</span><span class="value">{{detail.Phone}}
+                                    </span></li>
+                                <li><span class="title">Residence</span><span class="value">{{detail.City}} , {{detail.State}} , {{detail.Country}}</span></li>
+
+                                
+                            </ul>
+
+                        </div>
+                        <div class="anout_section_btn mt-3">
+                            {% for myresume in resume %}
+                            <a href="{{myresume.MyResume.url}}" class="portfolio_btn btn_yellow" target="_blank">
+                                <span class="first_text">Resume</span>
+                                <span class="second_text">Download</span>
+                            </a>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-{% endfor %}
+    {% endfor %}
+</div> <!-- End about section  -->
