@@ -7,11 +7,17 @@
 		content="Creative, minimal, Portfolio, cv, business, Resume, Information, personal portfolio, Professional">
 	<meta name="author" content="kamleshyadav">
 	<meta name="MobileOptimized" content="320">
+
+	<title>Hardik Savaliya</title>
+	<!-- Favicon Link -->
+
+	{% for detail in details %}
+    <link rel="shortcut icon" href="{{detail.logo.url}}">
+    {% endfor %}
 	<!--Start Style -->
 	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
 		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-	<link rel="stylesheet" href="{% static 'css/all.min.css' %}">
 	<link rel="stylesheet" href="{% static 'css/font.css' %}">
 	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
 	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
@@ -20,10 +26,5 @@
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
 	<link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
 	<link rel="stylesheet" href="{% static 'css/scrollbar.css' %}">
-	<!-- Favicon Link -->
-	{% for detail in details %}
-    <link rel="icon" href="{{detail.logo.url}}">
-    {% endfor %}
-
-	<title>Hardik Savaliya</title>
+	
 </head>
