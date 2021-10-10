@@ -1,0 +1,447 @@
+
+ .big {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    font-size: 7vw;
+    color: rgba(99, 99, 99, 0.11);
+    z-index: 0;
+    font-weight: 900; }
+    @media (max-width: 1200px) {
+        .big {
+            display: none!important;
+            
+        }
+    }
+    .big2 {
+        margin: -10px;
+        right: 0;
+
+    }
+    .port_sub_heading_sk {
+        font-size: 22px;
+        color: #222222;
+        font-weight: 600;
+        position: relative;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        cursor: default;
+        z-index: 0;
+        text-transform: capitalize;
+    }
+    .port_sub_heading_sk:after {
+        content: "";
+        position: absolute;
+        background: #ffc454;
+        left: -12%;
+        right: -12%;
+        top: 10px;
+        bottom: 11px;
+        margin: auto;
+        z-index: -1;
+        width: 20%;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.5s;
+    }
+.port_progress_mainbox , .bar_sk , .exp{
+    margin-top: 70px;
+}
+.progress-wrap {
+    width: 100%;
+    margin-bottom: 30px; }
+    .progress-wrap h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: 500; }
+  
+  .progress {
+    height: 10px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #e6e6e6;
+    overflow: visible; }
+  
+  .progress-bar {
+    background: #f59f00;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 12px;
+    line-height: 1.2;
+    color: #000000;
+    font-weight: 600;
+    position: relative;
+    overflow: visible;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px; 
+  }
+    .progress-bar:after {
+      position: absolute;
+      top: -2px;
+      right: 0;
+      width: 34px;
+      height: 34px;
+      content: '';
+      background: #f59f00;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      -ms-border-radius: 2px;
+      border-radius: 2px;
+      opacity: 0; }
+    .progress-bar span {
+      position: absolute;
+      top: -38px;
+      right: 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: #000000; }
+  
+  .progress-circle .progress {
+    width: 150px;
+    height: 150px;
+    background: none;
+    position: relative; }
+  
+  .progress-circle .progress::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 6px solid #eee;
+    position: absolute;
+    top: 0;
+    left: 0; }
+  
+  .progress-circle .progress > span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1; }
+  
+  .progress-circle .progress .progress-left {
+    left: 0; }
+  
+  .progress-circle .progress .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 6px;
+    border-style: solid;
+    position: absolute;
+    top: 0; }
+  
+  .progress-circle .progress .progress-left .progress-bar {
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    -ms-transform-origin: center left;
+    transform-origin: center left; }
+  
+  .progress-circle .progress .progress-right {
+    right: 0; }
+  
+  .progress-circle .progress .progress-right .progress-bar {
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    -ms-transform-origin: center right;
+    transform-origin: center right; }
+  
+  .progress-circle .progress .progress-value {
+    position: absolute;
+    top: 0;
+    left: 0; }
+   /*--------------------------------------------------------------
+  # Features
+  --------------------------------------------------------------*/
+  .features .nav-tabs {
+    border: 0;
+  }
+  #features{
+      padding-top: 20px;
+  }
+  .features .nav-link {
+    border: 1px solid #d4d6df;
+    padding: 15px;
+    transition: 0.3s;
+    color: #2a2c39;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .features .nav-link i {
+    padding-right: 15px;
+    font-size: 48px;
+  }
+  
+  .features .nav-link h4 {
+    font-size: 25px;
+    font-weight: 600;
+    padding: 20px 0px;
+    margin: 0;
+  }
+  
+  .features .nav-link:hover {
+    color: #ffc107;
+  }
+  
+  .features .nav-link.active {
+    background: #ffc107;
+    color: #fff;
+    border-color: #ffc107;
+  }
+  
+  @media (max-width: 768px) {
+    .features .nav-link i {
+      padding: 0;
+      line-height: 1;
+      font-size: 36px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .features .nav-link {
+      padding: 15px;
+    }
+    .features .nav-link i {
+      font-size: 24px;
+    }
+  }
+  
+  .features .tab-content {
+    margin-top: 30px;
+  }
+  
+  .features .tab-pane h3 {
+    font-weight: 600;
+    font-size: 26px;
+  }
+  
+  .features .tab-pane ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .features .tab-pane ul li {
+    padding-bottom: 10px;
+  }
+  
+  .features .tab-pane ul i {
+    font-size: 20px;
+    padding-right: 4px;
+    color: #ef6603;
+  }
+  
+  .features .tab-pane p:last-child {
+    margin-bottom: 0;
+  }
+  
+/* CLIENTS */
+.clients {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+  }
+  .clients h6 {
+    display: block;
+    line-height: 1;
+    margin-bottom: 20px;
+    font-family: "Fjalla One", sans-serif;
+    opacity: 0.5;
+    font-size: 14px;
+  }
+  .clients h2 {
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1.2;
+  }
+  .clients h2:before {
+    content: attr(data-text);
+    font-size: 20vw;
+    opacity: 0.05;
+    position: absolute;
+    left: 0;
+    top: -20%;
+  }
+  .clients h4 {
+    margin-top: 5px;
+    margin-bottom: 40px;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 25px;
+    line-height: 40px;
+    text-transform: uppercase;
+    padding-right: 20%;
+  }
+  .clients ul {
+    width: 100%;
+    float: left;
+    margin: 0;
+    margin-top: 90px;
+    padding: 0;
+  }
+  .clients ul * {
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -ms-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+  .clients ul li {
+    width: 25%;
+    float: left;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    position: relative;
+  }
+  .clients ul li img {
+    opacity: 1;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 15px;
+  }
+  .clients ul li small {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    text-align: center;
+    font-size: 600;
+    opacity: 0;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 22px;
+  }
+  .clients ul li:hover small {
+    margin-top: -25px;
+    opacity: 1;
+  }
+  .clients ul li:hover img {
+    opacity: 0.05;
+    transform: scale(1.2);
+  }
+  .pr_btn{
+    margin-top: 20px;
+  }
+  .portfolio_pr_btn{
+      text-decoration: none;
+padding: 10px;
+border: 1px solid blue;
+color: white;
+border-radius: 5px;
+background: rgb(1, 116, 211);
+  }
+  .portfolio_pr_btn:hover{
+    text-decoration: none;
+color: white;
+background: rgb(170, 0, 0);
+border: 1px solid rgb(170, 0, 0);
+
+}
+
+/* WORK WITH US */
+.work-with-us {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    background: #01f7b6;
+    position: relative;
+  }
+  .work-with-us:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0.04;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .work-with-us .container {
+    position: relative;
+    z-index: 2;
+  }
+  .work-with-us h6 {
+    display: block;
+    line-height: 1;
+    margin-bottom: 20px;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 14px;
+  }
+  .work-with-us h2 {
+    margin-bottom: 60px;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 1.2;
+    padding-right: 35%;
+  }
+  .work-with-us h2:before {
+    content: attr(data-text);
+    font-size: 20vw;
+    opacity: 0.05;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: -20%;
+  }
+  
+ 
+  .ftco-section{
+margin-top: 50px;
+  }
+  .contact-section .box {
+    width: 100%;
+    display: block;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px; }
+    @media (max-width: 991.98px) {
+      .contact-section .box {
+        margin-bottom: 30px; } }
+    .contact-section .box .icon {
+      width: 100px;
+      height: 100px;
+      background: #3ec2ff;
+      margin: 0 auto;
+      margin-bottom: 10px;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      border-radius: 50%; }
+  
+ 
+        
+        .contact-section .box .icon{
+            color: white ;
+        }
+        .contact-section .box .icon:hover{
+            background-color: white;
+            border: 2px solid #3e64ff;
+            color: #3e64ff ;
+        }
+        .switch a:hover{
+          box-shadow: 0px 0px 5px 5px wheat;
+                  }
+                  @media only screen and (max-width: 767px), only screen and (max-device-width: 767px){
+                    .work-with-us h2 {
+                        font-size: 32px;
+                        margin-bottom: 20px;
+                    }}
