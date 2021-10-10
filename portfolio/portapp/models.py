@@ -53,10 +53,16 @@ class Education(models.Model):
     Rank = models.CharField(max_length=100)
     Colour = models.CharField(max_length=100,default='black')
 
+    def _str_(self):
+        return self.Title
+
 class Skills(models.Model):
     id=models.AutoField(primary_key=True)
     SkillName = models.CharField(max_length=100)
     Rank = models.CharField(max_length=100)
+
+    def _str_(self):
+        return self.SkillName
 
 class Experiences(models.Model):
     id=models.AutoField(primary_key=True)
@@ -68,6 +74,9 @@ class Experiences(models.Model):
     Title = models.CharField(max_length=100)
     Description = models.TextField()
     Colour = models.CharField(max_length=100,default='black')
+
+    def _str_(self):
+        return self.Organization
     
 class Projects(models.Model):
     id=models.AutoField(primary_key=True)
@@ -76,10 +85,16 @@ class Projects(models.Model):
     Discription = models.TextField(default='null')
     ProjectLink = models.URLField(max_length = 200)
 
+    def _str_(self):
+        return self.ProjectName
+
 class Softwares(models.Model):
     id=models.AutoField(primary_key=True)
     SoftwareName = models.CharField(max_length=100)
     Softwareimage = models.ImageField(upload_to='pic')
+
+    def _str_(self):
+        return self.SoftwareName
 
 
 

@@ -19,23 +19,23 @@
             {% if forloop.counter|divisibleby:2 %}
             <div class="col-lg-6 col-md-12">
                     <style>
-                        .experience_section .col-md-12:nth-child(2) .ex_leftside {
+                        .experience_section .col-md-12:nth-child({{forloop.counter}}) .ex_leftside {
                             background: {{exp.Colour}};
                         }
-                        .experience_section .col-md-12:nth-child(2) .ex_leftside:after {
+                        .experience_section .col-md-12:nth-child({{forloop.counter}}) .ex_leftside:after {
                             border-right-color:{{exp.Colour}};
                         }
-                        .experience_section .col-md-12:nth-child(2) .ex_col {
+                        .experience_section .col-md-12:nth-child({{forloop.counter}}) .ex_col {
                             color:{{exp.Colour}};
                         }
                         @media (max-width:575px) {
-                            .experience_section .col-md-12:nth-child(2) .ex_leftside:after {
+                            .experience_section .col-md-12:nth-child({{forloop.counter}}) .ex_leftside:after {
                                 border-right-color: transparent;
                                 border-top-color: transparent;
 
                                 border-bottom-color: {{exp.Colour}};
                             }
-                            .experience_section .col-md-12:nth-child(2) .ex_leftside {
+                            .experience_section .col-md-12:nth-child({{forloop.counter}}) .ex_leftside {
                                 float: right;
                                 margin-top: 15px;
                                 margin-bottom: 0px;
@@ -69,17 +69,17 @@
                 {% else %}
                 <div class="col-lg-6 col-md-12">
                     <style>
-                        .experience_section .col-md-12:nth-child(1) .ex_leftside {
+                        .experience_section .col-md-12:nth-child({{forloop.counter}}) .ex_leftside {
                             background: {{exp.Colour}};
                         }
-                        .experience_section .col-md-12:nth-child(1) .ex_leftside:after {
+                        .experience_section .col-md-12:nth-child({{forloop.counter}}) .ex_leftside:after {
                             border-left-color:{{exp.Colour}};
                         }
-                        .experience_section .col-md-12:nth-child(1) .ex_col {
+                        .experience_section .col-md-12:nth-child({{forloop.counter}}) .ex_col {
                             color:{{exp.Colour}};
                         }
                         @media (max-width:575px) {
-                            .experience_section .col-md-12:nth-child(1) .ex_leftside:after {
+                            .experience_section .col-md-12:nth-child({{forloop.counter}}) .ex_leftside:after {
                                 border-left-color: transparent;
                                 border-top-color: {{exp.Colour}};
                             }
